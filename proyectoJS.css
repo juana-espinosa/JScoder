@@ -1,0 +1,19 @@
+.tablaDeNotas {
+    text-align: center;
+    border: 5px solid; 
+    border-color: black;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.calculadora{ 
+    text-align: center;
+    background-color: #E8DCCA;
+    text-decoration-line: white;
+    height: 100px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}

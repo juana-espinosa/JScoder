@@ -1,7 +1,13 @@
+//objetos//
+class Materia {
+  constructor (nombre, ano, promedio) {
+  this.nombre = nombre;
+  this.ano = ano;
+  this.promedio = promedio;
+} }
 function calcularNota(porcentaje) {
   //calculo notas//
   let nota = -1;
-
   if (porcentaje == 0) {
     nota = 0;
   } else if (porcentaje >= 1 && porcentaje <= 33) {
@@ -38,7 +44,6 @@ function calcularNota(porcentaje) {
   return nota;
   //fin calculo notas//
 }
-
 function mostrarPromedioNotas(cantidadNotas, totalNotas){
     let promedio = totalNotas / cantidadNotas;
     alert("El promedio de notas es: "  + promedio)
@@ -62,3 +67,21 @@ while (continuar) {
     }
 }
 mostrarPromedioNotas(cantidadDeMaterias, notasSumadas);
+//termina objetos//
+
+//arrays//
+const materias = [];
+materias.push (new Materia ('sucesiones', '4to', 9));
+materias.push (new Materia ('familia', '4to', 7));
+materias.push (new Materia ('infancia', '4to', 6));
+materias.push (new Materia ('contratos', '3ro', 4));
+materias.push (new Materia ('DipR', '5to', 8));
+//termina arrays//
+
+//function de orden superior//
+const materias4to = materias.filter ((el) => el.ano === '4to')
+const materias3ro = materias.filter ((el) => el.ano === '3ro')
+
+console.log (materias4to)
+console.log (materias3ro)
+//final funcioes orden superior//
