@@ -8,32 +8,45 @@
     <link href="/proyectoJS.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-  <form name="calculator" class="calculadora" >
-    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
-    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
-    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
-    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
-    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
-    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
-    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
-    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
-    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
-    <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
-    <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
-    <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
-    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
-    <input type="button" value="%" onClick="document.calculator.ans.value+='%'"> 
-    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
-    <input type="reset" value="Reset">
-    <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-    <br>El promedio es <input type="textfield" name="ans" value="">
-    </form>
+  <!-- cuerpo tabla interactiva-->
+  <header class="Cabecera">
+    <h3>Tabla de Promedios</h3>
+  </header>
+      <!--Campos de datos -->
+  <input id="campnombreMateria" class=_nombreMateria type="text">
+  <input id="campanoMateria" class=_anoMateria type="text">
+  <input id="campnotasMateria" class=_notasMateria type="text">
+    <!--Botón para agregar nueva fila a la tabla -->
+    <div id="metric_results">
+      <input class ="boton" type="button" id="create" value="Click Aquí" onclick="Javascript:agregarInfoCelda()">
+      </div>   
+        <!--Final botón--> 
+  <table>
+    <thead>
+      <tr>
+        <th>Materia</th>
+        <th>Año de la Materia</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody id="tablaMaterias">
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"> Promedio total:</td>
+        <td class="PromedioTotal"> </td>
+      </tr>
+    </tfoot>
+  </table>
+<!-- Cuerpo tabla interactiva-->
+ 
+<!-- Empieza tabla de notas-->
 <div class="tablaDeNotas">
     <table class="default">
-        <tr>     
-          <td>Porcentaje es</td>     
-          <td>Nota es</td>      
-        </tr>  
+      <tr>
+        <th>Porcentaje es</th>
+        <th>Nota es</th>
+      </tr> 
         <tr>   
             <td>0%</td>    
             <td>0</td>     

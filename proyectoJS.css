@@ -1,19 +1,82 @@
-.tablaDeNotas {
+/* Estilos de etiqueta*/
+body {
+    background-color: #CCBBEE;
+  }
+  
+  table {
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-collapse: collapse;
     text-align: center;
-    border: 5px solid; 
-    border-color: black;
-    width: 170px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
-}
-.calculadora{ 
+  }
+  
+  th {
+    background-color: rgba(5, 5, 100, 95);
+    height: 35px;
+    border-bottom: 1px solid rgb(210, 220, 250);
+    color: rgb(120, 120, 120);
+  }
+  
+  td {
+    color: rgba(100, 100, 100, 60);
+    height: 30px;
+    border: 0.5px solid rgba(240, 240, 240, 10);
+  }
+  
+  tfoot {
+    font-weight: bold;
+  }
+  
+  /*Pseudo-clases*/
+  th:hover {
+    background-color: rgba(20, 20, 20, 90);
+  }
+  
+  tr:hover {
+    background-color: rgba(15, 25, 25, 90);
+  }
+  
+  /* Estililos de clases*/
+  
+  .Cabecera {
+    background-color: rgba(5, 5, 100, 0.99);
+    border-radius: 4px;
+    height: 30px;
+    padding: 2em;
+    margin: 0 25%;
     text-align: center;
-    background-color: #E8DCCA;
-    text-decoration-line: white;
-    height: 100px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-}
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+  }
+  
+  footer {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  /*Estilo boton*/
+ .boton {
+    background-color: rgb(230, 50, 50); /* Rojo */
+    border-radius: 8px;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 770px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  ._nombreMateria {
+    margin-left: 570px;
+  }
