@@ -1,105 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto JavaScript Espinosa</title>
-    <link href="/proyectoJS.css" rel="stylesheet" type="text/css"> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto JavaScript Espinosa</title>
+  <link href="/proyectoJS.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-  <!-- cuerpo tabla interactiva-->
-  <header class="Cabecera">
-    <h3>Tabla de Promedios</h3>
-  </header>
-      <!--Campos de datos -->
-  <input id="campnombreMateria" class=_nombreMateria type="text">
-  <input id="campanoMateria" class=_anoMateria type="text">
-  <input id="campnotasMateria" class=_notasMateria type="text">
-    <!--Botón para agregar nueva fila a la tabla -->
-    <div id="metric_results">
-      <input class ="boton" type="button" id="create" value="Click Aquí" onclick="Javascript:agregarInfoCelda()">
-      </div>   
-        <!--Final botón--> 
-  <table>
-    <thead>
-      <tr>
-        <th>Materia</th>
-        <th>Año de la Materia</th>
-        <th>Promedio</th>
-      </tr>
-    </thead>
-    <tbody id="tablaMaterias">
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="2"> Promedio total:</td>
-        <td class="PromedioTotal"> </td>
-      </tr>
-    </tfoot>
-  </table>
+<!-- cuerpo tabla interactiva-->
+<header class="Cabecera">
+  <h3>Tabla de Promedios</h3>
+</header>
+
+<button id="botonCargarDatos" class="btnCargarDatos" onclick="Javascript:cargarDatos()">Cargar datos</button>
+<button id="botonDescargarDatos" class="btnDescargarDatos" onclick="Javascript:descargarDatos()">Descargar
+  datos</button>
+
+<!--Campos de datos -->
+<input id="campnombreMateria" class=_nombreMateria type="text">
+<input id="campanoMateria" class=_anoMateria type="text">
+
+<h3 id="testHola" style="visibility: hidden;">Hola</h3>
+
+<!--Botón para agregar nueva fila a la tabla -->
+<div id="metric_results">
+  <input class="boton" type="button" id="create" value="Click Aquí" onclick="Javascript:agregarInfoCelda()">
+</div>
+<!--Final botón-->
+
+<!--boton ocultar tabla 2-->
+<button type="button" name="btnOcultar" id="btnOcultar" class="btnOcultarLaTabla" height="60px" width="70px"
+  onclick="Javascript:ocultarTabla2Mostrar1()"
+  style="background-color: #a68fc0; border-radius: none; visibility: hidden;">
+  Volver
+</button>
+<!--final boton-->
+
+<!--TABLA INTERACTIVA 1-->
+<table id="tabla1">
+  <thead>
+    <tr>
+      <th>Materia</th>
+      <th>Año de la Materia</th>
+      <th id="filaNotas">Notas</th>
+      <th id="filaCuentas">Promedio</th>
+    </tr>
+  </thead>
+  <tbody id="tablaMaterias">
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2"> Promedio total:</td>
+      <td class="PromedioTotal"> </td>
+    </tr>
+  </tfoot>
+</table>
 <!-- Cuerpo tabla interactiva-->
- 
+
+<!--boton popup agregar notas-->
+<button type="button" name="btnagregarNota" id="btnagregarNota" class="btnAgregarNotasT2" height="60px" width="70px"
+  onclick="Javascript:botonIntento()" style="background-color: #a68fc0; border-radius: none; visibility: hidden;">
+  Click aquí para agregar una nota
+</button>
+<!--final boton-->
+
+
+<!--TABLA INTERACTIVA 2-->
+<table id="tabla2" style="visibility:hidden">
+  <thead>
+    <tr>
+      <th>Porcentaje</th>
+      <th>Nota</th>
+    </tr>
+  </thead>
+  <tbody id="tablaNotas">
+  </tbody>
+</table>
+<!--FIN TABLA-->
+
 <!-- Empieza tabla de notas-->
 <div class="tablaDeNotas">
-    <table class="default">
-      <tr>
-        <th>Porcentaje es</th>
-        <th>Nota es</th>
-      </tr> 
-        <tr>   
-            <td>0%</td>    
-            <td>0</td>     
-          </tr>    
-        <tr>   
-          <td>1% a 33%</td>    
-          <td>1</td>     
-        </tr> 
-        <tr>   
-            <td>34% a 54%</td>    
-            <td>2</td>     
-          </tr>          <tr>   
-            <td>55% a 60%</td>    
-            <td>3</td>     
-          </tr> 
-          <tr>   
-            <td>61% a 64%</td>    
-            <td>4</td>     
-          </tr>
-          <tr>   
-            <td>65% a 69%</td>    
-            <td>5</td>     
-          </tr>  
-          <tr>   
-            <td>70% a 73%</td>    
-            <td>6</td>     
-          </tr> 
-          <tr>   
-            <td>74% a 78%</td>    
-            <td>7</td>     
-          </tr>
-          <tr>   
-            <td>79% a 82%</td>    
-            <td>8</td>     
-          </tr> 
-          <tr>   
-            <td>83% a 87%</td>    
-            <td>9</td>     
-          </tr>  
-          <tr>   
-            <td>88% a 91%</td>    
-            <td>10</td>     
-          </tr> 
-          <tr>   
-            <td>92% a 96%</td>    
-            <td>11</td>     
-          </tr> 
-          <tr>   
-            <td>97% a 100%</td>    
-            <td>12</td>     
-          </tr> 
-      </table>
-    </div>
+  <table class="default">
+    <tr>
+      <th>Porcentaje es</th>
+      <th>Nota es</th>
+    </tr>
+    <tr>
+      <td>0%</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1% a 33%</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>34% a 54%</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>55% a 60%</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>61% a 64%</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>65% a 69%</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>70% a 73%</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>74% a 78%</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>79% a 82%</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>83% a 87%</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>88% a 91%</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>92% a 96%</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>97% a 100%</td>
+      <td>12</td>
+    </tr>
+  </table>
+</div>
+
+<!--Fetch-->
+<div id="divFetch">
+  <!--BOTON PARA FETCH-->
+  <button type="button" class="btnFetch" onclick="buscarLibro()">Click acá para solicitar solicitar un libro y poder
+    estudiar</button>
+  <!--FINAL BOTON FETCH-->
+
+  <!--campo para buscar libro-->
+  <input id="buscadorLibro" style="margin-left: 570px;" type="text"></input>
+  <!--fin-->
+
+  <!--resultado fetch-->
+  <h3 style="margin-left: 300px; color: #0000;"><a id="tituloLibro"></a></h3>
+  <!--fin-->
+</div>
+
 </body>
+
 <script src="entrega1.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
 </html>

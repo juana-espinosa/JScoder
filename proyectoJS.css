@@ -2,7 +2,10 @@
 body {
     background-color: #CCBBEE;
   }
-  
+  .btnLapiz{
+    width: 30px;
+    height: 30px;
+  }
   table {
     background: white;
     width: 50%;
@@ -62,13 +65,12 @@ body {
     text-align: center;
   }
 
-  /*Estilo boton*/
- .boton {
+  /* estilo boton para anadir filas */
+  .boton {
     background-color: rgb(230, 50, 50); /* Rojo */
     border-radius: 8px;
     position: relative;
     margin-top: 25px;
-    margin-left: 770px;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -76,7 +78,74 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin-left: 590px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
   }
+
+  /* estilo celda nombre materia */
   ._nombreMateria {
     margin-left: 570px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* estilo celda ano materia */
+  ._anoMateria {
+    margin-left: 570px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* boton para descargar archivos */
+  .btnDescargarDatos {
+    margin-left: 890px;
+    margin-top: 10px;
+    /* display: flex; */
+    justify-content: center;
+    background-color: #a68fc0;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+    /* boton para cargar archivos */
+  .btnCargarDatos {
+    margin-left: 900px;
+    display: flex;
+    justify-content: center;
+    background-color: #a68fc0;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* boton para ocultar la tabla 2 (volver) */
+  .btnOcultarLaTabla {
+    margin-left: 900px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .btnAgregarNotasT2 {
+    margin-left: 480px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  /*boton para fetch */
+  .btnFetch {
+    margin-top: 15px;
+    margin-left: 400px; 
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(230, 50, 50);
   }
